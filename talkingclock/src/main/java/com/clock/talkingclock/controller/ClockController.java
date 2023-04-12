@@ -21,7 +21,7 @@ public class ClockController {
 		return this.clockService.getCurrentTime();
 	}
 	
-	@GetMapping("/getTime/{userInput}")
+	@GetMapping("/getTime/{userTime}")
 	public Clock getTime(@PathVariable String userTime) throws Exception{
 		return this.clockService.getTime(userTime);
 	}
