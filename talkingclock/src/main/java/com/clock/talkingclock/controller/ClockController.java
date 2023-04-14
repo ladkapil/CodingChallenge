@@ -16,12 +16,12 @@ public class ClockController {
 	@Autowired
 	private ClockService clockService;
 	
-	@GetMapping("/getTime")
+	@GetMapping("/talkingclock")
 	public Clock getTime(){
 		return this.clockService.getCurrentTime();
 	}
 	
-	@GetMapping("/getTime/{userTime}")
+	@GetMapping("/talkingclock/{userTime}")
 	public Clock getTime(@PathVariable String userTime) throws Exception{
 		return this.clockService.getTime(userTime);
 	}
